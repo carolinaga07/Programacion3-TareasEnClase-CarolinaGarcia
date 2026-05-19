@@ -5,15 +5,13 @@ public class Paciente {
     private String Nombre;
     private int Edad;
     private String Cedula;
-    private String Enfermedad;
     private double Peso;
-    private Double Altura;
+    private double Altura;
 
 
-    public Paciente (String nombre, int edad, String cedula, String enfermedad, double peso, double altura){
+    public Paciente (String nombre, int edad, String cedula, double peso, double altura){
         this.Cedula = cedula;
         this.Edad = edad;
-        this.Enfermedad = enfermedad;
         this.Nombre = nombre;
         this.Peso = peso;
         this.Altura = altura;
@@ -46,16 +44,6 @@ public class Paciente {
 
     }
 
-   
-
-     public String getEnfermedad(){
-        return Enfermedad;
-    }
-
-    public void setEnfermedad(String Enfermedad){
-        this.Enfermedad = Enfermedad;
-
-    }
 
     public double getPeso(){
         return Peso;
@@ -99,7 +87,7 @@ public class Paciente {
     System.out.println(    "Cedula: " + getCedula());
     System.out.println(    "Peso: " + getPeso());
     System.out.println(    "Altura: " + getAltura());
-    System.out.println(    "IMC: %.2f\n " + CalcularIMC());
+    System.out.printf(    "IMC: %.2f\n " , CalcularIMC());
     System.out.println(    "Diagnostico: " + Clasificar());
     System.out.println("======================");
     }
