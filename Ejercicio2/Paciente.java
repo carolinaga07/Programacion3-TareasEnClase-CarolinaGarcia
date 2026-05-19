@@ -77,16 +77,16 @@ public class Paciente {
         return Peso / (Altura * Altura);
     }
 
-    public void Clasificar(){
+    public String Clasificar(){
         double imc = CalcularIMC();
 
         if(imc < 18.5){
-            System.out.println("Peso Bajo");
+            return"Peso Bajo";
         }
         if(imc < 25.0){
-            System.out.println("Peso Normal");
+            return "Peso Normal";
         }
-        System.out.println("Sobrepeso");
+        return "Sobrepeso";
 
     }
 
@@ -97,7 +97,10 @@ public class Paciente {
     System.out.println(    "Nombre: " + getNombre());
     System.out.println(    "Edad: " + getEdad());
     System.out.println(    "Cedula: " + getCedula());
-    System.out.println(    "Enfermedad: " + getEnfermedad());
+    System.out.println(    "Peso: " + getPeso());
+    System.out.println(    "Altura: " + getAltura());
+    System.out.println(    "IMC: %.2f\n " + CalcularIMC());
+    System.out.println(    "Diagnostico: " + Clasificar());
     System.out.println("======================");
     }
 
