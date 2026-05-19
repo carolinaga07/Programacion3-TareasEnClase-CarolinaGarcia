@@ -87,8 +87,8 @@ public class Paciente {
     System.out.println(    "Cedula: " + getCedula());
     System.out.println(    "Peso: " + getPeso());
     System.out.println(    "Altura: " + getAltura());
-    System.out.printf(    "IMC: %.2f\n " , CalcularIMC());
-    System.out.println(    "Diagnostico: " + Clasificar());
+    System.out.printf( "IMC: %.2f\n " , CalcularIMC());
+    System.out.println(   "Diagnostico: " + Clasificar());
     System.out.println("======================");
     }
 

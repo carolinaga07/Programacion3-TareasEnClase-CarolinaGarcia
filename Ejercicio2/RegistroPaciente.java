@@ -38,6 +38,7 @@ public class RegistroPaciente  {
 
                         System.out.println("Edad: ");
                         int edad = sc.nextInt();
+                        sc.nextLine();
 
                         System.out.println("Cedula: ");
                         String cedula = sc.nextLine();
@@ -68,15 +69,15 @@ public class RegistroPaciente  {
                          
                            for(int i = 0; i < pacientes.size(); i++){
                             System.out.println(pacientes.get(i).getNombre() 
-                            + "IMC: " 
+                            + " IMC: " 
                             + pacientes.get(i).CalcularIMC());  
                          }
 
                          break;
                     case 4:
                             for(int i = 0; i < pacientes.size(); i++){
-                            System.out.println(pacientes.get(i).getNombre() 
-                            + "Esta: " 
+                            System.out.println(pacientes.get(i).getNombre()  
+                            + " esta en: " 
                             + pacientes.get(i).Clasificar());  
                         }
 
@@ -91,7 +92,7 @@ public class RegistroPaciente  {
 
                         break;
                     case 6:
-                        
+
                         System.out.println("Saliendo...");
                         break;
 
