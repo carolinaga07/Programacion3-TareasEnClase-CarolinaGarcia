@@ -5,18 +5,16 @@ public class Paciente {
     private String Nombre;
     private int Edad;
     private String Cedula;
-    private boolean Seguro;
     private String Enfermedad;
     private double Peso;
     private Double Altura;
 
 
-    public Paciente (String nombre, int edad, String cedula, boolean seguro, String enfermedad, double peso, double altura){
+    public Paciente (String nombre, int edad, String cedula, String enfermedad, double peso, double altura){
         this.Cedula = cedula;
         this.Edad = edad;
         this.Enfermedad = enfermedad;
         this.Nombre = nombre;
-        this.Seguro = seguro;
         this.Peso = peso;
         this.Altura = altura;
     }
@@ -48,14 +46,7 @@ public class Paciente {
 
     }
 
-    public boolean GetSeguro(){
-        return Seguro;
-    }
-
-    public void setSeguro(boolean Seguro){
-        this.Seguro = Seguro;
-
-    }
+   
 
      public String getEnfermedad(){
         return Enfermedad;
@@ -82,7 +73,33 @@ public class Paciente {
         this.Altura = Altura;
     }
 
-    
+    public double CalcularIMC(){
+        return Peso / (Altura * Altura);
+    }
+
+    public void Clasificar(){
+        double imc = CalcularIMC();
+
+        if(imc < 18.5){
+            System.out.println("Peso Bajo");
+        }
+        if(imc < 25.0){
+            System.out.println("Peso Normal");
+        }
+        System.out.println("Sobrepeso");
+
+    }
+
+    public void informacionPaciente(){
+    System.out.println("======================");
+    System.out.println("  DATOS DEL PACIENTE  ");
+    System.out.println("======================");
+    System.out.println(    "Nombre: " + getNombre());
+    System.out.println(    "Edad: " + getEdad());
+    System.out.println(    "Cedula: " + getCedula());
+    System.out.println(    "Enfermedad: " + getEnfermedad());
+    System.out.println("======================");
+    }
 
 
 
