@@ -18,7 +18,7 @@ public class Main {
         Double indice = sc.nextDouble();
 
         try{
-            EstudianteInvalidarException.ValidarEstudiante(nombre, edad, indice);
+            ValidarEstudiante(nombre, edad, indice);
             System.out.println("Estudiante registrado correctamente");
         }
         catch(Exception e){
