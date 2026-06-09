@@ -26,6 +26,7 @@ public class Main {
             System.out.println(" 1. Agregar estudiante ");
             System.out.println(" 2. Mostrar estudiante");
             System.out.println(" 3. Salir");
+            System.out.println("============================");
 
             opcion = sc.nextInt();
             sc.nextLine();
@@ -36,10 +37,11 @@ public class Main {
                     FileWriter fw = new FileWriter("estudiante.txt", true);
                     BufferedWriter bw = new BufferedWriter(fw);
 
+                    System.out.println("Ingrese los datos del estudiante: ");
                     String nombre = sc.nextLine();
                     bw.write(nombre);
                     bw.newLine();
-                    System.out.println("Estudiante registrado");
+                    System.out.println("Estudiante registrado!!");
                     bw.close();
 
                     }
@@ -54,6 +56,7 @@ public class Main {
 
                     BufferedReader buffer = new BufferedReader(read);
                     while ((linea = buffer.readLine()) != null) {
+                        System.out.println("Datos del estudiante:\n");
                         System.out.println(linea);
                         
                     }
