@@ -39,6 +39,7 @@ public class Main {
                     String nombre = sc.nextLine();
                     bw.write(nombre);
                     bw.newLine();
+                    System.out.println("Estudiante registrado");
                     bw.close();
 
                     }
